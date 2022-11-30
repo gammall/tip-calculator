@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono";
+}
+
+body {
+  background: #c5e4e7;
+  height: 100vh;
+  width: 100vw;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+label {
+    font-weight: bold;
+    color: #5E7A7D;
+    margin-bottom: 10px;
+}
+
+input {
+    height: 48px;
+    padding: 0px 18px;
+    font-size: 24px;
+    max-width: 100%;
+    text-align: right;
+    color: #00474B;
+    background: #F3F9FA;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+}
+
+input:focus {
+    outline-color: #26C2AE;
+}
+
+.header {
+  text-align: center;
+  margin: 50px 0px;
+  letter-spacing: 20px;
+}
+
+.bill {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-symbol-dollar:before {
+    position: absolute;
+    top: 5px;
+    content: "$";
+    font-size: 24px;
+    color: #9EBBBD;
+    left: 19px;
+}
+
+.input-symbol-dollar {
+    position: relative;
+}
+
+
+.container {
+    background: white;
+    padding: 32px;
+    border-radius: 25px 25px 0px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+#tips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+
+#tips > .btn {
+    width: calc(50% - 8px);
+    height: 48px;
+    background: #00474B;
+    color: white;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 7px;
+}
+
+#tips > input {
+    width: calc(50% - 8px);
+    color: #547878;
+    text-align: center;
+}
+
+.selectTip {
+    margin-top: 32px;
+}
+
+
+.people {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+
+.people > .input-people-icon {
+    position: relative;
+}
+
+.people > .input-people-icon:before {
+    position: absolute;
+    top: 4px;
+    content: url(/people-icon.svg);
+    font-size: 24px;
+    color: #9EBBBD;
+    left: 19px;
+}
+
+.tipAmount-container {
+    background: #00474B;
+    padding: 30px 24px;
+    border-radius: 15px;
+}
+
+.tipAmount-container > button {
+    width: 100%;
+    background: #26C2AE;
+    color: #00474B;
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+    height: 48px;
+    border-radius: 5px;
+}
+
+.tipAmount {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 23px;
+}
+
+.tipAmount > h3 {
+    color: white;
+    font-size: 16px;
+}
+
+.tipAmount > h3 > span {
+    font-size: 13px;
+    color: #7F9D9F;
+}
+
+.tipAmount > h2 {
+    color: #26C2AE;
+    font-size: 32px;
+}
+
+.btn-active {
+    background: #26C2AE !important;
+    color: #00474b; 
+}
+
+@media (min-width: 1000px){
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container {
+        flex-direction: row;
+        width: 70%;
+        border-radius: 25px;
+        gap: 50px;
+    }
+
+    .selectTip-container {
+        flex: 1;
+    }
+    .tipAmount-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #tips > .btn {
+        width: 30%;
+    }
+    #tips > input {
+        width: 29%;
+        padding: 0px 4px;
+    }
+    .header {
+        margin: 163px 0px 78px 0px;
+    }
+
+    #tipAmount, #total {
+        font-size: 48px;
+    }
+
+    .tipAmount {
+        display: flex;
+        align-items: center;
+    }
+
+    #reset {
+        margin-top: auto;
+    }
+}
